@@ -1,0 +1,86 @@
+# ═══════════════════════════════════════════════════════════════════
+#  .gitignore — VijayMaruthi / vijayshare
+#  Protects secrets and financial data; excludes generated artifacts.
+#  Patterns without a leading slash apply at every directory level.
+# ═══════════════════════════════════════════════════════════════════
+
+# ── Secrets — NEVER commit these (applies recursively) ──
+.env
+.env.*
+!.env.example
+!.env.local.example
+.app_token
+*credentials*.json
+*.pem
+*.key
+
+# ── Node ──
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+
+# ── Python ──
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Financial / user data — NEVER commit ──
+/ledger/
+/uploads/
+uploads/
+*.db
+*.db-wal
+*.db-shm
+*.xls
+*.xlsx
+
+# ── Generated reports / charts / backtest output ──
+reports/
+hs_charts/
+hs_backtest_results/
+backtest_results/
+validation_results/
+.hs_cache/
+.validation_cache/
+*.png
+*.bak-*
+
+# ── Build artifacts / archives ──
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# ── Logs ──
+logs/
+*.log
+
+# ── Generated book tooling (node deps) ──
+document/ultimate-guide/tools/
+
+# ── Deterministic analyzer / AIOps generated state ──
+analysis_app/runs/
+analysis_app/snapshot/snapshot.db
+analysis_app/snapshot/manifest.json
+aiops/state/
+
+# ── Deployment / platform ──
+.vercel/
+
+# ── macOS / editors ──
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# ── Misc ──
+*.html.tmp

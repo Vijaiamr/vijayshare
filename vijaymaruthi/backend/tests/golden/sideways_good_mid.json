@@ -1,0 +1,132 @@
+{
+  "case": "sideways_good_mid",
+  "confidence": 81,
+  "conv_fundamental": {
+    "cap_applied": false,
+    "cap_reason": null,
+    "factors": {
+      "analyst": 100,
+      "dividend": 70,
+      "growth": 100.0,
+      "momentum": 70.0,
+      "profitability": 100.0,
+      "risk": 100.0,
+      "value": 80.0
+    },
+    "score": 91.5
+  },
+  "conv_technical": {
+    "components": {
+      "candlestick": {
+        "last_pattern": "None",
+        "score": 0.0,
+        "weight": 10
+      },
+      "momentum": {
+        "macd_bullish": true,
+        "rsi": 59.591223907467246,
+        "score": 13.0,
+        "weight": 15
+      },
+      "oscillator": {
+        "divergences": 0,
+        "score": 0.0,
+        "weight": 10
+      },
+      "pattern": {
+        "bear_weight": 0.0,
+        "bull_weight": 0.0,
+        "majority": true,
+        "patterns": [],
+        "score": 0.0,
+        "weight": 30
+      },
+      "trend": {
+        "above_200": true,
+        "above_50": true,
+        "score": 15.0,
+        "structure": "Uptrend (HH+HL)",
+        "weight": 15
+      },
+      "volume": {
+        "above_avg": true,
+        "obv_bullish": true,
+        "score": 10.0,
+        "up_down_ratio_10d": 1.4205952489405542,
+        "weight": 15
+      },
+      "wyckoff": {
+        "phase": "Ranging / Unknown",
+        "score": 0.0,
+        "weight": 5
+      }
+    },
+    "pattern_majority": true,
+    "pattern_votes": {
+      "available": true,
+      "bear_weight": 0.0,
+      "bull_weight": 0.0,
+      "geometry": [],
+      "majority": true,
+      "patterns": [],
+      "veto": false
+    },
+    "raw_total": 38.0,
+    "score": 69.0
+  },
+  "entry_zone": [
+    106.76204753463091,
+    108.94086483125604
+  ],
+  "invalidation": 99.89,
+  "ohlcv_sha": "6cd3d775fa1821b59b1f5736a047dddc1255f54a80e035e796b0fb324bea4c19",
+  "patterns": [],
+  "pre_gate_signal": "BUY",
+  "quality_gates": [],
+  "quantamental": {
+    "blended_rating": "Strong Buy",
+    "blended_score": 81.4,
+    "evidence": {
+      "fundamental": [
+        "Strong ROE (22.0%)",
+        "Healthy margins (24.0%)",
+        "Attractive PEG (0.90)",
+        "Reasonable P/E (18.0x)",
+        "Positive analyst consensus (strong_buy)"
+      ],
+      "technical": [
+        "Uptrending market structure",
+        "Price above SMA200",
+        "Price above SMA50",
+        "MACD bullish crossover"
+      ]
+    },
+    "fundamental_rating": "Buy",
+    "fundamental_score": 91.5,
+    "market_cap_category": "mid",
+    "sentiment_article_count": 0,
+    "sentiment_label": "",
+    "sentiment_score": 0,
+    "source": "Quantamental fusion of technical signal, 22-section fundamental screening, and news sentiment.",
+    "technical_confidence": 80,
+    "technical_score": 69.0,
+    "technical_signal": "BUY",
+    "weight_adjustments": [
+      "Wide Moat +3% fundamental",
+      "Low Risk +3% fundamental",
+      "Strong Buy consensus +3% fundamental"
+    ],
+    "weights": {
+      "fundamental": 0.55,
+      "technical": 0.45
+    }
+  },
+  "signal": "BUY",
+  "targets": [
+    117.99172966251207,
+    121.53148155238743,
+    126.25115073888793
+  ],
+  "technical_signal": "BUY",
+  "ticker": "TEST4.NS"
+}

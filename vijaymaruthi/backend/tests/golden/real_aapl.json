@@ -1,0 +1,234 @@
+{
+  "case": "real_aapl",
+  "confidence": 79,
+  "conv_fundamental": {
+    "cap_applied": false,
+    "cap_reason": null,
+    "factors": {
+      "analyst": 100,
+      "dividend": 70,
+      "growth": 100.0,
+      "momentum": 70.0,
+      "profitability": 100.0,
+      "risk": 100.0,
+      "value": 80.0
+    },
+    "score": 91.5
+  },
+  "conv_technical": {
+    "components": {
+      "candlestick": {
+        "last_pattern": "None",
+        "score": 0.0,
+        "weight": 10
+      },
+      "momentum": {
+        "macd_bullish": false,
+        "rsi": 54.79144129981587,
+        "score": 1.0,
+        "weight": 15
+      },
+      "oscillator": {
+        "divergences": 1,
+        "score": -5.0,
+        "weight": 10
+      },
+      "pattern": {
+        "bear_weight": 0.0,
+        "bull_weight": 0.0,
+        "majority": true,
+        "patterns": [
+          "symmetrical_triangle"
+        ],
+        "score": 0.0,
+        "weight": 30
+      },
+      "trend": {
+        "above_200": true,
+        "above_50": true,
+        "score": 15.0,
+        "structure": "Uptrend (HH+HL)",
+        "weight": 15
+      },
+      "volume": {
+        "above_avg": false,
+        "obv_bullish": true,
+        "score": 10.0,
+        "up_down_ratio_10d": 2.281995157862166,
+        "weight": 15
+      },
+      "wyckoff": {
+        "phase": "Accumulation",
+        "score": 5.0,
+        "weight": 5
+      }
+    },
+    "pattern_majority": true,
+    "pattern_votes": {
+      "available": true,
+      "bear_weight": 0.0,
+      "bull_weight": 0.0,
+      "geometry": [
+        {
+          "confidence": 85,
+          "confirmations": [
+            "Strong line convergence",
+            "5+ boundary touches",
+            "Breakout confirmed"
+          ],
+          "direction": "bullish",
+          "end_idx": 117,
+          "entry": 341.269989,
+          "entry_checklist": {
+            "adx_above_25": true,
+            "higher_timeframe_aligns": false,
+            "neckline_break_on_closing_basis": false,
+            "neckline_clearly_identifiable": false,
+            "no_major_news_next_48h": false,
+            "preceding_trend_confirmed": true,
+            "rr_above_2_0": true,
+            "valid_pattern_structure": true,
+            "volume_above_1_5x_avg_on_break": false,
+            "volume_declining_on_right_shoulder": false
+          },
+          "lines": [
+            {
+              "points": [
+                [
+                  "2026-09-22",
+                  345.339996
+                ],
+                [
+                  "2026-09-28",
+                  342.98999
+                ]
+              ],
+              "style": "solid"
+            },
+            {
+              "points": [
+                [
+                  "2026-10-01",
+                  325.809998
+                ],
+                [
+                  "2026-10-09",
+                  330.700012
+                ]
+              ],
+              "style": "solid"
+            }
+          ],
+          "markers": [
+            {
+              "label": "H1",
+              "price": 345.339996,
+              "time": "2026-09-22"
+            },
+            {
+              "label": "H2",
+              "price": 342.98999,
+              "time": "2026-09-28"
+            },
+            {
+              "label": "L1",
+              "price": 325.809998,
+              "time": "2026-10-01"
+            },
+            {
+              "label": "L2",
+              "price": 330.700012,
+              "time": "2026-10-09"
+            }
+          ],
+          "multi_tf_boost": 1.0,
+          "neckline": [],
+          "risk_reward": 3.185120121892412,
+          "status": "active",
+          "stop_loss": 329.0067165,
+          "structure": [],
+          "target": 380.32998499999997,
+          "timeframe": "daily",
+          "type": "symmetrical_triangle"
+        }
+      ],
+      "majority": true,
+      "patterns": [
+        "symmetrical_triangle"
+      ],
+      "veto": false
+    },
+    "raw_total": 26.0,
+    "score": 63.0
+  },
+  "entry_zone": [
+    334.44458922,
+    341.269989
+  ],
+  "invalidation": 264.6,
+  "ohlcv_sha": "20138a62f7b41a8152df3c82b4d1b139cd7f5cca8cefad2693d4c3b02c3f5752",
+  "patterns": [
+    {
+      "confidence": 85,
+      "direction": "bullish",
+      "end_idx": 117,
+      "entry": 341.269989,
+      "risk_reward": 3.185120121892412,
+      "start_idx": null,
+      "status": "active",
+      "stop_loss": 329.0067165,
+      "target": 380.32998499999997,
+      "timeframe": "daily",
+      "type": "symmetrical_triangle"
+    }
+  ],
+  "pre_gate_signal": "BUY",
+  "quality_gates": [],
+  "quantamental": {
+    "blended_rating": "Buy",
+    "blended_score": 78.7,
+    "evidence": {
+      "fundamental": [
+        "Strong ROE (22.0%)",
+        "Healthy margins (24.0%)",
+        "Attractive PEG (0.90)",
+        "Reasonable P/E (18.0x)",
+        "Positive analyst consensus (strong_buy)"
+      ],
+      "technical": [
+        "Uptrending market structure",
+        "Price above SMA200",
+        "Price above SMA50",
+        "MACD bearish crossover",
+        "Wyckoff Accumulation"
+      ]
+    },
+    "fundamental_rating": "Buy",
+    "fundamental_score": 91.5,
+    "market_cap_category": "large",
+    "sentiment_article_count": 0,
+    "sentiment_label": "",
+    "sentiment_score": 0,
+    "source": "Quantamental fusion of technical signal, 22-section fundamental screening, and news sentiment.",
+    "technical_confidence": 82,
+    "technical_score": 63.0,
+    "technical_signal": "BUY",
+    "weight_adjustments": [
+      "Wide Moat +3% fundamental",
+      "Low Risk +3% fundamental",
+      "Strong Buy consensus +3% fundamental"
+    ],
+    "weights": {
+      "fundamental": 0.55,
+      "technical": 0.45
+    }
+  },
+  "signal": "BUY",
+  "targets": [
+    417.939978,
+    430.47817734,
+    447.19577646000005
+  ],
+  "technical_signal": "BUY",
+  "ticker": "AAPL"
+}

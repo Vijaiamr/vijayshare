@@ -1,0 +1,232 @@
+{
+  "case": "real_amzn",
+  "confidence": 55,
+  "conv_fundamental": {
+    "cap_applied": false,
+    "cap_reason": null,
+    "factors": {
+      "analyst": 100,
+      "dividend": 70,
+      "growth": 100.0,
+      "momentum": 70.0,
+      "profitability": 100.0,
+      "risk": 100.0,
+      "value": 80.0
+    },
+    "score": 91.5
+  },
+  "conv_technical": {
+    "components": {
+      "candlestick": {
+        "last_pattern": "Shooting Star",
+        "score": -3.0,
+        "weight": 10
+      },
+      "momentum": {
+        "macd_bullish": true,
+        "rsi": 62.298508517122414,
+        "score": 13.0,
+        "weight": 15
+      },
+      "oscillator": {
+        "divergences": 0,
+        "score": 0.0,
+        "weight": 10
+      },
+      "pattern": {
+        "bear_weight": 0.0,
+        "bull_weight": 0.0,
+        "majority": true,
+        "patterns": [
+          "symmetrical_triangle"
+        ],
+        "score": 0.0,
+        "weight": 30
+      },
+      "trend": {
+        "above_200": true,
+        "above_50": true,
+        "score": 7.0,
+        "structure": "Contracting / Consolidation",
+        "weight": 15
+      },
+      "volume": {
+        "above_avg": false,
+        "obv_bullish": true,
+        "score": 2.0,
+        "up_down_ratio_10d": 1.1100265277389547,
+        "weight": 15
+      },
+      "wyckoff": {
+        "phase": "Ranging / Unknown",
+        "score": 0.0,
+        "weight": 5
+      }
+    },
+    "pattern_majority": true,
+    "pattern_votes": {
+      "available": true,
+      "bear_weight": 0.0,
+      "bull_weight": 0.0,
+      "geometry": [
+        {
+          "confidence": 95,
+          "confirmations": [
+            "Strong line convergence",
+            "5+ boundary touches",
+            "Breakout > line >2%"
+          ],
+          "direction": "bullish",
+          "end_idx": 108,
+          "entry": 258.579987,
+          "entry_checklist": {
+            "adx_above_25": false,
+            "higher_timeframe_aligns": false,
+            "neckline_break_on_closing_basis": false,
+            "neckline_clearly_identifiable": false,
+            "no_major_news_next_48h": false,
+            "preceding_trend_confirmed": true,
+            "rr_above_2_0": true,
+            "valid_pattern_structure": true,
+            "volume_above_1_5x_avg_on_break": false,
+            "volume_declining_on_right_shoulder": false
+          },
+          "lines": [
+            {
+              "points": [
+                [
+                  "2026-08-19",
+                  266.399994
+                ],
+                [
+                  "2026-09-04",
+                  261.119995
+                ]
+              ],
+              "style": "solid"
+            },
+            {
+              "points": [
+                [
+                  "2026-09-16",
+                  244.300003
+                ],
+                [
+                  "2026-09-28",
+                  244.729996
+                ]
+              ],
+              "style": "solid"
+            }
+          ],
+          "markers": [
+            {
+              "label": "H1",
+              "price": 266.399994,
+              "time": "2026-08-19"
+            },
+            {
+              "label": "H2",
+              "price": 261.119995,
+              "time": "2026-09-04"
+            },
+            {
+              "label": "L1",
+              "price": 244.300003,
+              "time": "2026-09-16"
+            },
+            {
+              "label": "L2",
+              "price": 244.729996,
+              "time": "2026-09-28"
+            }
+          ],
+          "multi_tf_boost": 1.0,
+          "neckline": [],
+          "risk_reward": 2.8131419372390156,
+          "status": "active",
+          "stop_loss": 242.86802401125,
+          "structure": [],
+          "target": 302.779969,
+          "timeframe": "daily",
+          "type": "symmetrical_triangle"
+        }
+      ],
+      "majority": true,
+      "patterns": [
+        "symmetrical_triangle"
+      ],
+      "veto": false
+    },
+    "raw_total": 19.0,
+    "score": 59.5
+  },
+  "entry_zone": [
+    253.40838726,
+    258.579987
+  ],
+  "invalidation": 225.86,
+  "ohlcv_sha": "0afea0dd0f822f8a68d7acbb58b54f4c49d35fcefdc151933a350e685ac6e825",
+  "patterns": [
+    {
+      "confidence": 95,
+      "direction": "bullish",
+      "end_idx": 108,
+      "entry": 258.579987,
+      "risk_reward": 2.8131419372390156,
+      "start_idx": null,
+      "status": "active",
+      "stop_loss": 242.86802401125,
+      "target": 302.779969,
+      "timeframe": "daily",
+      "type": "symmetrical_triangle"
+    }
+  ],
+  "pre_gate_signal": "BUY",
+  "quality_gates": [],
+  "quantamental": {
+    "blended_rating": "Buy",
+    "blended_score": 77.1,
+    "evidence": {
+      "fundamental": [
+        "Strong ROE (22.0%)",
+        "Healthy margins (24.0%)",
+        "Attractive PEG (0.90)",
+        "Reasonable P/E (18.0x)",
+        "Positive analyst consensus (strong_buy)"
+      ],
+      "technical": [
+        "Price above SMA200",
+        "Price above SMA50",
+        "MACD bullish crossover"
+      ]
+    },
+    "fundamental_rating": "Buy",
+    "fundamental_score": 91.5,
+    "market_cap_category": "large",
+    "sentiment_article_count": 0,
+    "sentiment_label": "",
+    "sentiment_score": 0,
+    "source": "Quantamental fusion of technical signal, 22-section fundamental screening, and news sentiment.",
+    "technical_confidence": 66,
+    "technical_score": 59.5,
+    "technical_signal": "BUY",
+    "weight_adjustments": [
+      "Wide Moat +3% fundamental",
+      "Low Risk +3% fundamental",
+      "Strong Buy consensus +3% fundamental"
+    ],
+    "weights": {
+      "fundamental": 0.55,
+      "technical": 0.45
+    }
+  },
+  "signal": "HOLD",
+  "targets": [
+    291.299974,
+    300.03897322,
+    311.69097218
+  ],
+  "technical_signal": "BUY",
+  "ticker": "AMZN"
+}

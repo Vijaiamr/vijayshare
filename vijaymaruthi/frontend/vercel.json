@@ -1,0 +1,9 @@
+{
+  "name": "vijaymaruthi",
+  "crons": [
+    {
+      "path": "/api/cron/analytics-rollup",
+      "schedule": "0 1 * * *"
+    }
+  ]
+}

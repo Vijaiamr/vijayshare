@@ -1,0 +1,100 @@
+{
+  "_comment": "Manual Fundamental Data Overrides for HDFCBANK.NS",
+  "_instructions": "Fill in values from annual report, screener.in, or other sources. Each section is optional.",
+
+  "section_02_business_quality": {
+    "moat_rating": "Wide Moat",
+    "moat_indicators": [
+      "Largest private sector bank in India (₹1,278,070 Cr market cap)",
+      "High ROE (13.8%) with consistent performance",
+      "Strong profit margins (26.8%)",
+      "Extensive branch network: 8,000+ branches, 211K employees",
+      "Dominant retail banking franchise with strong brand equity",
+      "Superior asset quality vs peers (lowest NPAs in large banks)",
+      "Pricing power in retail deposits and fee income"
+    ],
+    "pricing_power": "Strong — market leader in retail deposits, competitive advantage in low-cost CASA ratio (~38%)",
+    "competitive_advantage": "Largest private sector bank with extensive branch network, strong brand, and technology leadership",
+    "revenue_concentration": "Diversified across Retail Banking (~45%), Wholesale Banking (~35%), Treasury (~15%), and other segments",
+    "diversification": "Well-diversified across retail, wholesale, treasury, insurance, and rural banking segments",
+    "notes": "Wide moat verified: brand strength, regulatory barriers, scale advantages, and customer switching costs."
+  },
+
+  "section_03_management": {
+    "promoter_holding_pct": 0.0,
+    "promoter_pledge_pct": 0.0,
+    "board_members_count": 10,
+    "avg_tenure": "8+ years for senior management",
+    "governance_score": "CRISIL: 8/10 (Strong)",
+    "auditor": "Deloitte Haskins & Sells LLP",
+    "related_party_transactions": "Within normal course of business; disclosed in annual report",
+    "notes": "Promoter (HDFC Ltd) merged with HDFC Bank in July 2023. Post-merger, promoter shareholding is effectively 0% as no single entity holds controlling stake."
+  },
+
+  "section_04_shareholding": {
+    "promoter_group_pct": 0.0,
+    "dii_mf_pct": 24.46,
+    "retail_others_pct": 17.66,
+    "government_holding_pct": 0.0,
+    "pledged_pct": 0.0,
+    "source_note": "Data from latest BSE shareholding pattern filing (June 2026). Promoter: 0% post-merger. FII: 57.88%, DII/MF: 24.46%, Retail & Others: 17.66%."
+  },
+
+  "section_13_industry": {
+    "peers_mentioned": ["ICICIBANK.NS", "KOTAKBANK.NS", "AXISBANK.NS", "SBIN.NS"],
+    "industry_rank": "Largest private sector bank by market cap; 2nd largest overall (after SBI)",
+    "market_cap_rank": "1st among private banks, 2nd among all Indian banks",
+    "growth_relative_to_industry": "In-line with private banking average; superior asset quality",
+    "notes": "Key competitors: ICICI Bank (overall), Kotak Mahindra (retail/HNI), Axis Bank (corporate), SBI (public sector)."
+  },
+
+  "section_14_economic_sensitivity": {
+    "notes": "As a bank, HDFCBANK is highly sensitive to RBI repo rate changes which affect NIMs. Moderate sensitivity to GDP growth (loan demand) and inflation (cost pressure). Beta of 0.42 indicates defensive characteristics vs Nifty."
+  },
+
+  "section_15_risk": {
+    "risk_flags": [
+      "Moderate leverage (D/E ~0.95 for banking operations)",
+      "Regulatory compliance (RBI/Basel norms) — ongoing cost burden",
+      "Merger integration risk (HDFC Ltd merger fully integrated but cultural alignment ongoing)",
+      "Asset quality cyclicality — NPA cycle could impact if economic slowdown occurs",
+      "Interest rate risk — margin compression if RBI cuts rates aggressively"
+    ],
+    "notes": "Overall risk is Moderate. HDFCBANK has the strongest asset quality among Indian large banks (GNPA ~1.2%, NNPA ~0.3%). Capital adequacy (CAR ~18.5%) well above regulatory minimum."
+  },
+
+  "section_19_conference_call": {
+    "last_earnings_call": "2026-04-18",
+    "transcript": "Available on company IR page: https://www.hdfcbank.com/investor-relations",
+    "management_outlook": "Management expects 12-15% loan growth in FY27, NIMs stabilizing around 3.8-4.0%, focus on deposit mobilization and fee income growth. Digital transformation and rural expansion are key strategic priorities.",
+    "md_and_a": "The annual report highlights strong capital adequacy (CAR 18.5%), continued investment in technology, expansion of branch network in under-banked regions, and focus on retail asset growth.",
+    "forward_guidance": "Revenue growth guidance: 12-15%, NIM guidance: 3.8-4.0%, ROE target: 14-16%",
+    "notes": "Earnings call transcripts available from HDFC Bank Investor Relations page."
+  },
+
+  "section_20_news": {
+    "sentiment": "Positive — Strong business updates, management rejig seen as positive, analyst upgrades post-Q1 results"
+  },
+
+  "section_22_suitability": {
+    "key_strengths": [
+      "Strong ROE of 13.8% with consistent track record",
+      "Healthy profit margins of 26.8% (best among large Indian banks)",
+      "Attractive PEG ratio of 0.89 (undervalued relative to growth)",
+      "Low volatility (beta 0.42) — defensive holding",
+      "Strong analyst consensus with 25.1% upside to target",
+      "Largest private sector bank with wide economic moat",
+      "Superior asset quality with lowest NPAs in peer group",
+      "Post-merger synergies driving cost efficiencies"
+    ],
+    "key_concerns": [
+      "Moderate leverage (banking operations)",
+      "Regulatory compliance costs (RBI/Basel norms)",
+      "Merger integration risks (fully integrated but ongoing)",
+      "Interest rate sensitivity — NIM compression risk",
+      "Asset quality cyclicality in economic downturn"
+    ],
+    "detail": "HDFCBANK offers a compelling risk-reward at current valuation (P/E 18.5x, P/B 2.2x) with strong fundamentals, wide economic moat, and 25% analyst upside. Suitable as a core long-term holding for investors seeking quality exposure to Indian banking.",
+    "notes": "Suitability assessment based on combined automated analysis and manual fundamental research. Verify all data points before investment decisions."
+  }
+}

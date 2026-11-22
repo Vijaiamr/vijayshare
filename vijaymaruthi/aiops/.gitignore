@@ -1,0 +1,19 @@
+# Runtime state — never commit
+state/
+*.db
+*.db-wal
+*.db-shm
+
+# Generated artifacts — never commit
+reports/
+
+# Local env / caches
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/

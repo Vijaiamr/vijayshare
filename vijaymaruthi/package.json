@@ -1,0 +1,16 @@
+{
+  "name": "vijaymaruthi-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VijayMaruthi Wealth Management Platform - Stock Analysis + Financial Ledger",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && python3 -m uvicorn api.main:app --reload --port 8765",
+    "install:all": "cd frontend && npm install",
+    "lint": "cd frontend && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

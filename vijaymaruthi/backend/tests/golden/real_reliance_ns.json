@@ -1,0 +1,130 @@
+{
+  "case": "real_reliance_ns",
+  "confidence": 55,
+  "conv_fundamental": {
+    "cap_applied": false,
+    "cap_reason": null,
+    "factors": {
+      "analyst": 100,
+      "dividend": 70,
+      "growth": 100.0,
+      "momentum": 70.0,
+      "profitability": 100.0,
+      "risk": 100.0,
+      "value": 80.0
+    },
+    "score": 91.5
+  },
+  "conv_technical": {
+    "components": {
+      "candlestick": {
+        "last_pattern": "None",
+        "score": 0.0,
+        "weight": 10
+      },
+      "momentum": {
+        "macd_bullish": false,
+        "rsi": 30.583601902706945,
+        "score": -6.0,
+        "weight": 15
+      },
+      "oscillator": {
+        "divergences": 0,
+        "score": 0.0,
+        "weight": 10
+      },
+      "pattern": {
+        "bear_weight": 0.0,
+        "bull_weight": 0.0,
+        "majority": true,
+        "patterns": [],
+        "score": 0.0,
+        "weight": 30
+      },
+      "trend": {
+        "above_200": false,
+        "above_50": false,
+        "score": -11.0,
+        "structure": "Downtrend (LH+LL)",
+        "weight": 15
+      },
+      "volume": {
+        "above_avg": false,
+        "obv_bullish": false,
+        "score": -10.0,
+        "up_down_ratio_10d": 0.4683800021668733,
+        "weight": 15
+      },
+      "wyckoff": {
+        "phase": "Ranging / Unknown",
+        "score": 0.0,
+        "weight": 5
+      }
+    },
+    "pattern_majority": true,
+    "pattern_votes": {
+      "available": true,
+      "bear_weight": 0.0,
+      "bull_weight": 0.0,
+      "geometry": [],
+      "majority": true,
+      "patterns": [],
+      "veto": false
+    },
+    "raw_total": -27.0,
+    "score": 36.5
+  },
+  "entry_zone": [
+    1135.72202352,
+    1182.07802448
+  ],
+  "invalidation": 1077.77702232,
+  "ohlcv_sha": "b2a68ace93b05b7504cee079ae0ed59d37a72fd0da7a6fb41fba2ba196207259",
+  "patterns": [],
+  "pre_gate_signal": "BUY",
+  "quality_gates": [],
+  "quantamental": {
+    "blended_rating": "Buy",
+    "blended_score": 66.8,
+    "evidence": {
+      "fundamental": [
+        "Strong ROE (22.0%)",
+        "Healthy margins (24.0%)",
+        "Attractive PEG (0.90)",
+        "Reasonable P/E (18.0x)",
+        "Positive analyst consensus (strong_buy)"
+      ],
+      "technical": [
+        "Downtrending market structure",
+        "MACD bearish crossover",
+        "RSI oversold (31)",
+        "Strong trend (ADX 66)"
+      ]
+    },
+    "fundamental_rating": "Buy",
+    "fundamental_score": 91.5,
+    "market_cap_category": "large",
+    "sentiment_article_count": 0,
+    "sentiment_label": "",
+    "sentiment_score": 0,
+    "source": "Quantamental fusion of technical signal, 22-section fundamental screening, and news sentiment.",
+    "technical_confidence": 42,
+    "technical_score": 36.5,
+    "technical_signal": "HOLD",
+    "weight_adjustments": [
+      "Wide Moat +3% fundamental",
+      "Low Risk +3% fundamental",
+      "Strong Buy consensus +3% fundamental"
+    ],
+    "weights": {
+      "fundamental": 0.55,
+      "technical": 0.45
+    }
+  },
+  "signal": "HOLD",
+  "targets": [
+    1466.62
+  ],
+  "technical_signal": "HOLD",
+  "ticker": "RELIANCE.NS"
+}

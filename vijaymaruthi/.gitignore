@@ -1,0 +1,68 @@
+# ═══════════════════════════════════════════════════════════════════
+#  .gitignore — VijayMaruthi platform
+#  Protects secrets (Supabase keys) and financial data (ledger).
+# ═══════════════════════════════════════════════════════════════════
+
+# ── Secrets — NEVER commit these ──
+.env
+.env.*
+!.env.example
+!.env.local.example
+sync/.app_token
+
+# ── Node ──
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+
+# ── Python ──
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# ── Financial / user data — NEVER commit ──
+# NOTE: anchored to repo root (/ledger/) so it protects the standalone
+# prototype app at ./ledger WITHOUT excluding frontend source code under
+# frontend/components/ledger, frontend/lib/ledger, frontend/app/api/ledger,
+# frontend/app/(app)/ledger (Tailwind v4 auto-detection respects .gitignore
+# and was silently skipping those components — breaking all ledger styling).
+/ledger/
+/uploads/
+backend/api/routes/knowledge_base/
+*.db
+*.db-wal
+*.db-shm
+
+# ── Generated reports / charts ──
+reports/
+hs_charts/
+hs_backtest_results/
+backtest_results/
+.hs_cache/
+.validation_cache/
+validation_results/
+
+# ── Logs ──
+logs/
+*.log
+
+# ── macOS / editors ──
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# ── Misc ──
+*.html.tmp
+
+# ── Deterministic analyzer (analysis_app) ──
+# The pinned snapshot DB is large (full-NSE 3y ≈ hundreds of MB) and fully
+# rebuildable via `python -m analysis_app freeze`. The small pinned universe
+# list (analysis_app/snapshot/universe.json) stays committed.
+analysis_app/runs/
+analysis_app/snapshot/snapshot.db
+analysis_app/snapshot/manifest.json

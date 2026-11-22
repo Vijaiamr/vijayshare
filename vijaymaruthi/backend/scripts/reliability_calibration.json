@@ -1,0 +1,252 @@
+{
+  "generated_at": "2026-09-03T00:06:19",
+  "years": 5,
+  "min_n": 15,
+  "universe": [
+    "RELIANCE.NS",
+    "TCS.NS",
+    "HDFCBANK.NS",
+    "ICICIBANK.NS",
+    "INFY.NS",
+    "SBIN.NS",
+    "ITC.NS",
+    "LT.NS",
+    "BHARTIARTL.NS",
+    "TATAMOTORS.NS",
+    "MARUTI.NS",
+    "ASIANPAINT.NS"
+  ],
+  "per_ticker": {
+    "RELIANCE.NS": {
+      "trades": 61,
+      "win_rate": 19.7,
+      "total_r": -14.74
+    },
+    "TCS.NS": {
+      "trades": 57,
+      "win_rate": 22.8,
+      "total_r": 2.95
+    },
+    "HDFCBANK.NS": {
+      "trades": 67,
+      "win_rate": 22.4,
+      "total_r": -26.24
+    },
+    "ICICIBANK.NS": {
+      "trades": 47,
+      "win_rate": 23.4,
+      "total_r": -6.05
+    },
+    "INFY.NS": {
+      "trades": 46,
+      "win_rate": 19.6,
+      "total_r": 11.43
+    },
+    "SBIN.NS": {
+      "trades": 48,
+      "win_rate": 18.8,
+      "total_r": -12.79
+    },
+    "ITC.NS": {
+      "trades": 53,
+      "win_rate": 20.8,
+      "total_r": -17.17
+    },
+    "LT.NS": {
+      "trades": 55,
+      "win_rate": 27.3,
+      "total_r": 4.05
+    },
+    "BHARTIARTL.NS": {
+      "trades": 51,
+      "win_rate": 23.5,
+      "total_r": -0.63
+    },
+    "TATAMOTORS.NS": {
+      "error": "Insufficient data for TATAMOTORS.NS (0 bars)"
+    },
+    "MARUTI.NS": {
+      "trades": 45,
+      "win_rate": 20.0,
+      "total_r": -4.59
+    },
+    "ASIANPAINT.NS": {
+      "trades": 65,
+      "win_rate": 23.1,
+      "total_r": 11.43
+    }
+  },
+  "aggregate": {
+    "ascending_triangle": {
+      "n": 2,
+      "wins": 1,
+      "losses": 1,
+      "scratches": 0,
+      "decided_win_rate_pct": 50.0,
+      "wr_ci95_pct": [
+        9.5,
+        90.5
+      ],
+      "expectancy_r": 0.31,
+      "proposed_weight": 1.0,
+      "basis": "insufficient data (n=2 < 15)"
+    },
+    "bear_flag": {
+      "n": 8,
+      "wins": 3,
+      "losses": 2,
+      "scratches": 3,
+      "decided_win_rate_pct": 60.0,
+      "wr_ci95_pct": [
+        23.1,
+        88.2
+      ],
+      "expectancy_r": 0.759,
+      "proposed_weight": 1.0,
+      "basis": "insufficient data (n=8 < 15)"
+    },
+    "bull_flag": {
+      "n": 9,
+      "wins": 1,
+      "losses": 6,
+      "scratches": 2,
+      "decided_win_rate_pct": 14.3,
+      "wr_ci95_pct": [
+        2.6,
+        51.3
+      ],
+      "expectancy_r": -0.558,
+      "proposed_weight": 1.0,
+      "basis": "insufficient data (n=9 < 15)"
+    },
+    "cup_and_handle": {
+      "n": 22,
+      "wins": 8,
+      "losses": 10,
+      "scratches": 4,
+      "decided_win_rate_pct": 44.4,
+      "wr_ci95_pct": [
+        24.6,
+        66.3
+      ],
+      "expectancy_r": -0.107,
+      "proposed_weight": 0.9,
+      "basis": "expectancy -0.11R over n=22"
+    },
+    "descending_triangle": {
+      "n": 3,
+      "wins": 1,
+      "losses": 2,
+      "scratches": 0,
+      "decided_win_rate_pct": 33.3,
+      "wr_ci95_pct": [
+        6.1,
+        79.2
+      ],
+      "expectancy_r": -0.02,
+      "proposed_weight": 1.0,
+      "basis": "insufficient data (n=3 < 15)"
+    },
+    "falling_wedge": {
+      "n": 72,
+      "wins": 13,
+      "losses": 27,
+      "scratches": 32,
+      "decided_win_rate_pct": 32.5,
+      "wr_ci95_pct": [
+        20.1,
+        48.0
+      ],
+      "expectancy_r": 0.483,
+      "proposed_weight": 1.15,
+      "basis": "expectancy +0.48R over n=72"
+    },
+    "head_and_shoulders": {
+      "n": 30,
+      "wins": 10,
+      "losses": 10,
+      "scratches": 10,
+      "decided_win_rate_pct": 50.0,
+      "wr_ci95_pct": [
+        29.9,
+        70.1
+      ],
+      "expectancy_r": -0.416,
+      "proposed_weight": 0.65,
+      "basis": "expectancy -0.42R over n=30"
+    },
+    "inverse_head_and_shoulders": {
+      "n": 16,
+      "wins": 14,
+      "losses": 1,
+      "scratches": 1,
+      "decided_win_rate_pct": 93.3,
+      "wr_ci95_pct": [
+        70.2,
+        98.8
+      ],
+      "expectancy_r": 0.227,
+      "proposed_weight": 1.1,
+      "basis": "expectancy +0.23R over n=16"
+    },
+    "symmetrical_triangle": {
+      "n": 409,
+      "wins": 69,
+      "losses": 194,
+      "scratches": 146,
+      "decided_win_rate_pct": 26.2,
+      "wr_ci95_pct": [
+        21.3,
+        31.9
+      ],
+      "expectancy_r": -0.192,
+      "proposed_weight": 0.9,
+      "basis": "expectancy -0.19R over n=409"
+    },
+    "triple_bottom": {
+      "n": 24,
+      "wins": 11,
+      "losses": 12,
+      "scratches": 1,
+      "decided_win_rate_pct": 47.8,
+      "wr_ci95_pct": [
+        29.2,
+        67.0
+      ],
+      "expectancy_r": 0.034,
+      "proposed_weight": 1.0,
+      "basis": "expectancy +0.03R over n=24"
+    }
+  },
+  "method": {
+    "tiers": [
+      {
+        "max_expectancy_ge": 0.25,
+        "weight": 1.15
+      },
+      {
+        "max_expectancy_ge": 0.1,
+        "weight": 1.1
+      },
+      {
+        "max_expectancy_ge": -0.05,
+        "weight": 1.0
+      },
+      {
+        "max_expectancy_ge": -0.2,
+        "weight": 0.9
+      },
+      {
+        "max_expectancy_ge": -0.4,
+        "weight": 0.8
+      }
+    ],
+    "below_worst_tier": 0.65,
+    "clamp": [
+      0.6,
+      1.2
+    ],
+    "insufficient_data_weight": 1.0,
+    "zero_win_guard": "wins==0 and n>=min_n caps weight at 0.70"
+  }
+}

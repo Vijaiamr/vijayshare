@@ -1,0 +1,15 @@
+# Core runtime
+yfinance>=1.5
+pandas>=2.0
+numpy>=1.26
+requests>=2.31
+
+# Optional: ADK orchestration layer (web UI) — install with: pip install -r requirements-adk.txt
+# google-adk>=0.1
+
+# Optional: local HTTP API server — install with: pip install -r requirements-server.txt
+# fastapi>=0.110
+# uvicorn>=0.29
+
+# Dev/test
+pytest>=8

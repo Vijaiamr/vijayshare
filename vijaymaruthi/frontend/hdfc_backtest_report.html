@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFC Bank 5-Year Backtest Results</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f0f1a; color: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        h1 { text-align: center; color: #00d4ff; margin: 20px 0; font-size: 2rem; }
+        h2 { color: #ff6b6b; margin: 30px 0 15px; border-bottom: 2px solid #ff6b6b; padding-bottom: 10px; }
+        h3 { color: #4ecdc4; margin: 20px 0 10px; }
+        
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 20px 0; }
+        .summary-card { background: linear-gradient(135deg, #1a1a2e, #16213e); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid #333; }
+        .summary-card .value { font-size: 2rem; font-weight: bold; margin: 10px 0; }
+        .summary-card .label { font-size: 0.85rem; color: #888; text-transform: uppercase; }
+        .green { color: #4ecdc4; }
+        .red { color: #ff6b6b; }
+        .yellow { color: #ffd93d; }
+        .blue { color: #00d4ff; }
+        
+        .trades-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .trades-table th { background: #1a1a2e; color: #00d4ff; padding: 12px; text-align: left; font-size: 0.85rem; }
+        .trades-table td { padding: 12px; border-bottom: 1px solid #222; font-size: 0.9rem; }
+        .trades-table tr:hover { background: #1a1a2e; }
+        
+        .win { color: #4ecdc4; }
+        .loss { color: #ff6b6b; }
+        .scratch { color: #ffd93d; }
+        
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
+        .badge-win { background: rgba(78, 205, 196, 0.2); color: #4ecdc4; }
+        .badge-loss { background: rgba(255, 107, 107, 0.2); color: #ff6b6b; }
+        .badge-scratch { background: rgba(255, 217, 61, 0.2); color: #ffd93d; }
+        
+        .loss-analysis { background: linear-gradient(135deg, #2a1a1a, #1a1a2e); border-radius: 12px; padding: 20px; margin: 20px 0; border-left: 4px solid #ff6b6b; }
+        .loss-analysis h4 { color: #ff6b6b; margin-bottom: 10px; }
+        .loss-analysis p { color: #ccc; line-height: 1.6; }
+        
+        .lessons { background: linear-gradient(135deg, #1a2a1a, #1a1a2e); border-radius: 12px; padding: 20px; margin: 20px 0; border-left: 4px solid #4ecdc4; }
+        .lessons li { color: #ccc; margin: 8px 0; line-height: 1.5; }
+        
+        .filter-btns { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
+        .filter-btn { padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer; font-size: 0.85rem; transition: all 0.3s; }
+        .filter-btn.active { transform: scale(1.05); }
+        .filter-all { background: #333; color: #fff; }
+        .filter-all.active { background: #00d4ff; }
+        .filter-win { background: rgba(78, 205, 196, 0.2); color: #4ecdc4; }
+        .filter-win.active { background: #4ecdc4; color: #000; }
+        .filter-loss { background: rgba(255, 107, 107, 0.2); color: #ff6b6b; }
+        .filter-loss.active { background: #ff6b6b; color: #000; }
+        .filter-scratch { background: rgba(255, 217, 61, 0.2); color: #ffd93d; }
+        .filter-scratch.active { background: #ffd93d; color: #000; }
+        
+        .pattern-chart { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+        .pattern-box { background: #1a1a2e; border-radius: 12px; padding: 20px; }
+        .pattern-box h4 { margin-bottom: 15px; }
+        .bar { height: 30px; border-radius: 5px; display: flex; align-items: center; padding: 0 10px; margin: 5px 0; font-size: 0.85rem; font-weight: bold; }
+        
+        @media (max-width: 768px) {
+            .pattern-chart { grid-template-columns: 1fr; }
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HDFC Bank 5-Year Backtest</h1>
+        <p style="text-align: center; color: #888;">July 2021 - July 2026 | Pattern-Based Trading Analysis</p>
+        
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="label">Total Trades</div>
+                <div class="value blue">34</div>
+            </div>
+            <div class="summary-card">
+                <div class="label">Win Rate</div>
+                <div class="value yellow">47.1%</div>
+            </div>
+            <div class="summary-card">
+                <div class="label">Total Return</div>
+                <div class="value green">+19.73R</div>
+            </div>
+            <div class="summary-card">
+                <div class="label">Avg Win</div>
+                <div class="value green">+1.67R</div>
+            </div>
+            <div class="summary-card">
+                <div class="label">Avg Loss</div>
+                <div class="value red">-1.00R</div>
+            </div>
+        </div>
+        
+        <h2>Pattern Performance</h2>
+        <div class="pattern-chart">
+            <div class="pattern-box">
+                <h4 class="green">Cup & Handle</h4>
+                <div style="margin-bottom: 10px;">
+                    <span class="badge badge-win">12 Wins</span>
+                    <span class="badge badge-loss">2 Losses</span>
+                </div>
+                <div class="bar green" style="width: 85%;">Win Rate: 85.7%</div>
+                <div class="bar green" style="width: 90%;">Total: +21.56R</div>
+                <p style="color: #888; margin-top: 10px; font-size: 0.85rem;">The star performer! Reliable bullish continuation pattern.</p>
+            </div>
+            <div class="pattern-box">
+                <h4 class="red">Falling Wedge</h4>
+                <div style="margin-bottom: 10px;">
+                    <span class="badge badge-win">4 Wins</span>
+                    <span class="badge badge-loss">5 Losses</span>
+                    <span class="badge badge-scratch">11 Scratches</span>
+                </div>
+                <div class="bar red" style="width: 20%;">Win Rate: 20%</div>
+                <div class="bar red" style="width: 15%;">Total: -1.83R</div>
+                <p style="color: #888; margin-top: 10px; font-size: 0.85rem;">Unreliable. Many breakeven trades, frequent failures.</p>
+            </div>
+        </div>
+        
+        <h2>All Trades</h2>
+        <div class="filter-btns">
+            <button class="filter-btn filter-all active" onclick="filterTrades('all')">All (34)</button>
+            <button class="filter-btn filter-win" onclick="filterTrades('win')">Wins (16)</button>
+            <button class="filter-btn filter-loss" onclick="filterTrades('loss')">Losses (7)</button>
+            <button class="filter-btn filter-scratch" onclick="filterTrades('scratch')">Scratches (11)</button>
+        </div>
+        
+        <table class="trades-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Pattern</th>
+                    <th>Result</th>
+                    <th>Entry Date</th>
+                    <th>Entry ₹</th>
+                    <th>Exit Date</th>
+                    <th>Exit ₹</th>
+                    <th>R-Multiple</th>
+                    <th>Days</th>
+                    <th>Trend</th>
+                </tr>
+            </thead>
+            <tbody id="tradesBody">
+            </tbody>
+        </table>
+        
+        <h2>Why Did 7 Trades Fail?</h2>
+        
+        <div class="loss-analysis">
+            <h4>Cup & Handle Failures (2 trades) - Aug-Oct 2023</h4>
+            <p><strong>What happened:</strong> Both trades entered at ~₹825 in August 2023 when HDFC Bank was in an uptrend. The Cup & Handle pattern looked perfect, but then:</p>
+            <ul style="margin: 10px 0 10px 20px;">
+                <li>The "handle" broke down instead of breaking up</li>
+                <li>Broader market correction in Sept-Oct 2023 took banking stocks down</li>
+                <li>HDFC Bank fell 9% to hit stop loss at ₹750</li>
+            </ul>
+            <p><strong>Lesson:</strong> Even perfect patterns can fail during market-wide corrections. Always check market sentiment!</p>
+        </div>
+        
+        <div class="loss-analysis">
+            <h4>Falling Wedge Failures (5 trades) - 2023, 2025, 2026</h4>
+            <p><strong>What happened:</strong> Falling Wedge is a REVERSAL pattern that predicts price will go UP. But:</p>
+            <ul style="margin: 10px 0 10px 20px;">
+                <li><strong>2023:</strong> Stock was in strong downtrend, reversal didn't happen</li>
+                <li><strong>Jan 2025:</strong> Pattern appeared during market weakness, immediate drop</li>
+                <li><strong>Jan 2026:</strong> Another downtrend, pattern failed</li>
+            </ul>
+            <p><strong>Lesson:</strong> Falling Wedge is unreliable in strong downtrends. Don't catch falling knives!</p>
+        </div>
+        
+        <h2>Key Lessons</h2>
+        <div class="lessons">
+            <ul>
+                <li><strong>Pattern #1:</strong> Cup & Handle works best (85.7% win rate) - stick with it</li>
+                <li><strong>Pattern #2:</strong> Falling Wedge is unreliable (20% win rate) - avoid or reduce size</li>
+                <li><strong>Risk Management:</strong> All losses capped at -1R thanks to stop losses</li>
+                <li><strong>Win/Loss Ratio:</strong> Winners (+1.67R) are bigger than losses (-1R) = NET PROFIT</li>
+                <li><strong>Market Context:</strong> Patterns fail during broad market corrections</li>
+                <li><strong>Scratches are OK:</strong> 11 breakeven trades protected capital</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        const trades = [
+            {id:1, pattern:"Falling Wedge", result:"win", entry:"2022-05-02", entryP:702, exit:"2022-10-21", exitP:719, r:0.24, days:119, trend:"downtrend"},
+            {id:2, pattern:"Falling Wedge", result:"win", entry:"2022-05-04", entryP:678, exit:"2022-10-24", exitP:731, r:1.05, days:119, trend:"downtrend"},
+            {id:3, pattern:"Cup & Handle", result:"win", entry:"2022-06-14", entryP:656, exit:"2022-11-11", exitP:795, r:2.86, days:102, trend:"downtrend"},
+            {id:4, pattern:"Cup & Handle", result:"win", entry:"2022-06-15", entryP:654, exit:"2022-12-07", exitP:805, r:3.26, days:119, trend:"downtrend"},
+            {id:5, pattern:"Falling Wedge", result:"scratch", entry:"2023-05-29", entryP:818, exit:"2023-07-12", exitP:818, r:0, days:31, trend:"downtrend"},
+            {id:6, pattern:"Falling Wedge", result:"scratch", entry:"2023-05-30", entryP:818, exit:"2023-07-12", exitP:818, r:0, days:30, trend:"downtrend"},
+            {id:7, pattern:"Falling Wedge", result:"scratch", entry:"2023-05-31", entryP:805, exit:"2023-08-14", exitP:805, r:0, days:52, trend:"downtrend"},
+            {id:8, pattern:"Falling Wedge", result:"scratch", entry:"2023-06-08", entryP:804, exit:"2023-08-14", exitP:804, r:0, days:46, trend:"downtrend"},
+            {id:9, pattern:"Falling Wedge", result:"scratch", entry:"2023-06-09", entryP:805, exit:"2023-08-14", exitP:805, r:0, days:45, trend:"downtrend"},
+            {id:10, pattern:"Cup & Handle", result:"loss", entry:"2023-08-08", entryP:825, exit:"2023-10-04", exitP:750, r:-1, days:38, trend:"uptrend"},
+            {id:11, pattern:"Cup & Handle", result:"loss", entry:"2023-08-09", entryP:825, exit:"2023-10-04", exitP:750, r:-1, days:37, trend:"uptrend"},
+            {id:12, pattern:"Falling Wedge", result:"loss", entry:"2023-08-29", entryP:795, exit:"2023-10-26", exitP:740, r:-1, days:39, trend:"downtrend"},
+            {id:13, pattern:"Falling Wedge", result:"loss", entry:"2023-08-30", entryP:789, exit:"2023-10-26", exitP:740, r:-1, days:38, trend:"downtrend"},
+            {id:14, pattern:"Falling Wedge", result:"scratch", entry:"2023-08-31", entryP:786, exit:"2023-09-20", exitP:786, r:0, days:13, trend:"downtrend"},
+            {id:15, pattern:"Falling Wedge", result:"scratch", entry:"2023-09-01", entryP:787, exit:"2023-09-20", exitP:787, r:0, days:12, trend:"downtrend"},
+            {id:16, pattern:"Cup & Handle", result:"win", entry:"2024-03-06", entryP:721, exit:"2024-07-03", exitP:884, r:2.21, days:77, trend:"downtrend"},
+            {id:17, pattern:"Cup & Handle", result:"win", entry:"2024-03-28", entryP:724, exit:"2024-09-23", exitP:880, r:2.04, days:119, trend:"uptrend"},
+            {id:18, pattern:"Cup & Handle", result:"win", entry:"2024-04-01", entryP:735, exit:"2024-09-24", exitP:884, r:1.7, days:119, trend:"uptrend"},
+            {id:19, pattern:"Falling Wedge", result:"win", entry:"2024-07-29", entryP:803, exit:"2025-01-17", exitP:818, r:0.33, days:119, trend:"uptrend"},
+            {id:20, pattern:"Falling Wedge", result:"scratch", entry:"2024-08-01", entryP:819, exit:"2024-10-07", exitP:819, r:0, days:45, trend:"uptrend"},
+            {id:21, pattern:"Falling Wedge", result:"scratch", entry:"2024-08-02", entryP:830, exit:"2025-01-09", exitP:830, r:0, days:109, trend:"uptrend"},
+            {id:22, pattern:"Falling Wedge", result:"scratch", entry:"2024-08-05", entryP:808, exit:"2024-10-07", exitP:808, r:0, days:43, trend:"downtrend"},
+            {id:23, pattern:"Falling Wedge", result:"scratch", entry:"2024-10-18", entryP:841, exit:"2025-01-09", exitP:841, r:0, days:56, trend:"uptrend"},
+            {id:24, pattern:"Falling Wedge", result:"loss", entry:"2025-01-01", entryP:891, exit:"2025-01-09", exitP:839, r:-1, days:6, trend:"uptrend"},
+            {id:25, pattern:"Falling Wedge", result:"loss", entry:"2025-01-02", entryP:897, exit:"2025-01-09", exitP:839, r:-1, days:5, trend:"uptrend"},
+            {id:26, pattern:"Cup & Handle", result:"win", entry:"2025-02-24", entryP:839, exit:"2025-06-06", exitP:991, r:2.28, days:67, trend:"downtrend"},
+            {id:27, pattern:"Cup & Handle", result:"win", entry:"2025-02-25", entryP:841, exit:"2025-06-26", exitP:1005, r:2.36, days:80, trend:"downtrend"},
+            {id:28, pattern:"Cup & Handle", result:"win", entry:"2025-02-27", entryP:850, exit:"2025-07-24", exitP:1018, r:2.13, days:99, trend:"downtrend"},
+            {id:29, pattern:"Cup & Handle", result:"win", entry:"2025-02-28", entryP:866, exit:"2025-08-25", exitP:982, r:1.22, days:119, trend:"uptrend"},
+            {id:30, pattern:"Cup & Handle", result:"win", entry:"2025-03-07", entryP:845, exit:"2025-09-02", exitP:945, r:1.37, days:119, trend:"downtrend"},
+            {id:31, pattern:"Cup & Handle", result:"win", entry:"2025-03-18", entryP:855, exit:"2025-06-26", exitP:998, r:1.71, days:67, trend:"uptrend"},
+            {id:32, pattern:"Falling Wedge", result:"loss", entry:"2026-01-29", entryP:936, exit:"2026-03-04", exitP:860, r:-1, days:23, trend:"downtrend"},
+            {id:33, pattern:"Cup & Handle", result:"win", entry:"2026-04-24", entryP:785, exit:"2026-07-10", exitP:825, r:0.42, days:55, trend:"downtrend"},
+            {id:34, pattern:"Falling Wedge", result:"win", entry:"2026-06-10", entryP:747, exit:"2026-07-10", exitP:825, r:1.55, days:22, trend:"downtrend"},
+        ];
+        
+        function renderTrades(filter = 'all') {
+            const tbody = document.getElementById('tradesBody');
+            tbody.innerHTML = '';
+            
+            const filtered = filter === 'all' ? trades : trades.filter(t => t.result === filter);
+            
+            filtered.forEach(t => {
+                const resultClass = t.result === 'win' ? 'win' : t.result === 'loss' ? 'loss' : 'scratch';
+                const badgeClass = t.result === 'win' ? 'badge-win' : t.result === 'loss' ? 'badge-loss' : 'badge-scratch';
+                const rClass = t.r > 0 ? 'green' : t.r < 0 ? 'red' : 'yellow';
+                
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${t.id}</td>
+                        <td>${t.pattern}</td>
+                        <td><span class="badge ${badgeClass}">${t.result.toUpperCase()}</span></td>
+                        <td>${t.entry}</td>
+                        <td>₹${t.entryP}</td>
+                        <td>${t.exit}</td>
+                        <td>₹${t.exitP}</td>
+                        <td class="${rClass}">${t.r > 0 ? '+' : ''}${t.r}R</td>
+                        <td>${t.days}</td>
+                        <td>${t.trend}</td>
+                    </tr>
+                `;
+            });
+        }
+        
+        function filterTrades(filter) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderTrades(filter);
+        }
+        
+        renderTrades();
+    </script>
+</body>
+</html>

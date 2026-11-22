@@ -1,0 +1,229 @@
+{
+  "case": "real_hdfcbank_ns",
+  "confidence": 55,
+  "conv_fundamental": {
+    "cap_applied": false,
+    "cap_reason": null,
+    "factors": {
+      "analyst": 100,
+      "dividend": 70,
+      "growth": 100.0,
+      "momentum": 70.0,
+      "profitability": 100.0,
+      "risk": 100.0,
+      "value": 80.0
+    },
+    "score": 91.5
+  },
+  "conv_technical": {
+    "components": {
+      "candlestick": {
+        "last_pattern": "None",
+        "score": 0.0,
+        "weight": 10
+      },
+      "momentum": {
+        "macd_bullish": false,
+        "rsi": 36.00324323687571,
+        "score": -8.0,
+        "weight": 15
+      },
+      "oscillator": {
+        "divergences": 2,
+        "score": 10.0,
+        "weight": 10
+      },
+      "pattern": {
+        "bear_weight": 5.0,
+        "bull_weight": 0.0,
+        "majority": false,
+        "patterns": [
+          "symmetrical_triangle"
+        ],
+        "score": -5.0,
+        "weight": 30
+      },
+      "trend": {
+        "above_200": false,
+        "above_50": false,
+        "score": -3.0,
+        "structure": "Expanding / Volatile",
+        "weight": 15
+      },
+      "volume": {
+        "above_avg": false,
+        "obv_bullish": false,
+        "score": -13.0,
+        "up_down_ratio_10d": 0.6192179174558937,
+        "weight": 15
+      },
+      "wyckoff": {
+        "phase": "Markdown (vol drying)",
+        "score": 0.0,
+        "weight": 5
+      }
+    },
+    "pattern_majority": false,
+    "pattern_votes": {
+      "available": true,
+      "bear_weight": 5.0,
+      "bull_weight": 0.0,
+      "geometry": [
+        {
+          "confidence": 95,
+          "confirmations": [
+            "Strong line convergence",
+            "5+ boundary touches",
+            "Breakout < line >2%"
+          ],
+          "direction": "bearish",
+          "end_idx": 111,
+          "entry": 704.900024,
+          "entry_checklist": {
+            "adx_above_25": false,
+            "higher_timeframe_aligns": false,
+            "neckline_break_on_closing_basis": false,
+            "neckline_clearly_identifiable": false,
+            "no_major_news_next_48h": false,
+            "preceding_trend_confirmed": true,
+            "rr_above_2_0": true,
+            "valid_pattern_structure": true,
+            "volume_above_1_5x_avg_on_break": false,
+            "volume_declining_on_right_shoulder": false
+          },
+          "lines": [
+            {
+              "points": [
+                [
+                  "2026-08-24",
+                  734.400024
+                ],
+                [
+                  "2026-09-15",
+                  730.75
+                ]
+              ],
+              "style": "solid"
+            },
+            {
+              "points": [
+                [
+                  "2026-09-11",
+                  681.900024
+                ],
+                [
+                  "2026-09-29",
+                  706.25
+                ]
+              ],
+              "style": "solid"
+            }
+          ],
+          "markers": [
+            {
+              "label": "H1",
+              "price": 734.400024,
+              "time": "2026-08-24"
+            },
+            {
+              "label": "H2",
+              "price": 730.75,
+              "time": "2026-09-15"
+            },
+            {
+              "label": "L1",
+              "price": 681.900024,
+              "time": "2026-09-11"
+            },
+            {
+              "label": "L2",
+              "price": 706.25,
+              "time": "2026-09-29"
+            }
+          ],
+          "multi_tf_boost": 1.0,
+          "neckline": [],
+          "risk_reward": 3.6542524630296347,
+          "status": "failed",
+          "stop_loss": 733.6336709120001,
+          "structure": [],
+          "target": 599.900024,
+          "timeframe": "daily",
+          "type": "symmetrical_triangle"
+        }
+      ],
+      "majority": false,
+      "patterns": [
+        "symmetrical_triangle"
+      ],
+      "veto": true
+    },
+    "raw_total": -19.0,
+    "score": 40.5
+  },
+  "entry_zone": [
+    690.80202352,
+    718.99802448
+  ],
+  "invalidation": 681.9,
+  "ohlcv_sha": "34ac8c5cbe1d281d8b922b45b489e42e60a77ef4b34711aadbb7a7115ff62642",
+  "patterns": [
+    {
+      "confidence": 95,
+      "direction": "bearish",
+      "end_idx": 111,
+      "entry": 704.900024,
+      "risk_reward": 3.6542524630296347,
+      "start_idx": null,
+      "status": "failed",
+      "stop_loss": 733.6336709120001,
+      "target": 599.900024,
+      "timeframe": "daily",
+      "type": "symmetrical_triangle"
+    }
+  ],
+  "pre_gate_signal": "BUY",
+  "quality_gates": [],
+  "quantamental": {
+    "blended_rating": "Buy",
+    "blended_score": 68.6,
+    "evidence": {
+      "fundamental": [
+        "Strong ROE (22.0%)",
+        "Healthy margins (24.0%)",
+        "Attractive PEG (0.90)",
+        "Reasonable P/E (18.0x)",
+        "Positive analyst consensus (strong_buy)"
+      ],
+      "technical": [
+        "MACD bearish crossover",
+        "2 divergence(s) detected"
+      ]
+    },
+    "fundamental_rating": "Buy",
+    "fundamental_score": 91.5,
+    "market_cap_category": "large",
+    "sentiment_article_count": 0,
+    "sentiment_label": "",
+    "sentiment_score": 0,
+    "source": "Quantamental fusion of technical signal, 22-section fundamental screening, and news sentiment.",
+    "technical_confidence": 52,
+    "technical_score": 40.5,
+    "technical_signal": "HOLD",
+    "weight_adjustments": [
+      "Wide Moat +3% fundamental",
+      "Low Risk +3% fundamental",
+      "Strong Buy consensus +3% fundamental"
+    ],
+    "weights": {
+      "fundamental": 0.55,
+      "technical": 0.45
+    }
+  },
+  "signal": "HOLD",
+  "targets": [
+    843.0
+  ],
+  "technical_signal": "HOLD",
+  "ticker": "HDFCBANK.NS"
+}

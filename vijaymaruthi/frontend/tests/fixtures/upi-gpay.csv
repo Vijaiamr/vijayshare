@@ -1,0 +1,4 @@
+Date,Type,Category (From/To),UTR,Debit,Credit,Note
+01-06-2026,Debit,To Swiggy,123456789012,543.00,,Food
+02-06-2026,Credit,From Employer,123456789013,,85000.00,Salary
+03-06-2026,Debit,To Zepto,123456789014,200.00,,Groceries

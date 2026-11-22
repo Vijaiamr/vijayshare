@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vm-aiops"
+version = "0.1.0"
+description = "AIOPS — NSE AI Market Intelligence & Continuous Learning Agent (additive Auto Pilot feature)"
+requires-python = ">=3.11"
+dependencies = [
+    "yfinance>=1.5",
+    "pandas>=2.0",
+    "numpy>=1.26",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+adk = ["google-adk>=2.9,<3"]
+server = ["fastapi>=0.110", "uvicorn>=0.29"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+aiops = "aiops.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aiops*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

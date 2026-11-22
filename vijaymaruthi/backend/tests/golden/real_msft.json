@@ -1,0 +1,213 @@
+{
+  "case": "real_msft",
+  "confidence": 55,
+  "conv_fundamental": {
+    "cap_applied": false,
+    "cap_reason": null,
+    "factors": {
+      "analyst": 100,
+      "dividend": 70,
+      "growth": 100.0,
+      "momentum": 70.0,
+      "profitability": 100.0,
+      "risk": 100.0,
+      "value": 80.0
+    },
+    "score": 91.5
+  },
+  "conv_technical": {
+    "components": {
+      "candlestick": {
+        "last_pattern": "Shooting Star",
+        "score": -3.0,
+        "weight": 10
+      },
+      "momentum": {
+        "macd_bullish": true,
+        "rsi": 77.79503556725619,
+        "score": 7.0,
+        "weight": 15
+      },
+      "oscillator": {
+        "divergences": 0,
+        "score": -3.0,
+        "weight": 10
+      },
+      "pattern": {
+        "bear_weight": 10.0,
+        "bull_weight": 0.0,
+        "majority": false,
+        "patterns": [
+          "head_and_shoulders"
+        ],
+        "score": -10.0,
+        "weight": 30
+      },
+      "trend": {
+        "above_200": true,
+        "above_50": true,
+        "score": 15.0,
+        "structure": "Uptrend (HH+HL)",
+        "weight": 15
+      },
+      "volume": {
+        "above_avg": false,
+        "obv_bullish": true,
+        "score": 10.0,
+        "up_down_ratio_10d": 4.254478336161119,
+        "weight": 15
+      },
+      "wyckoff": {
+        "phase": "Markup (vol drying)",
+        "score": 0.0,
+        "weight": 5
+      }
+    },
+    "pattern_majority": false,
+    "pattern_votes": {
+      "available": true,
+      "bear_weight": 10.0,
+      "bull_weight": 0.0,
+      "geometry": [
+        {
+          "confidence": 92,
+          "confirmations": [
+            "Shoulders symmetrical (\u00b13%)",
+            "Head height \u22653% above neckline",
+            "Volume declining left\u2192head\u2192right shoulder",
+            "Neckline nearly flat",
+            "ADX 34 >25 (trending)"
+          ],
+          "direction": "bearish",
+          "end_idx": 92,
+          "entry": 493.950012,
+          "entry_checklist": {
+            "adx_above_25": true,
+            "higher_timeframe_aligns": false,
+            "neckline_break_on_closing_basis": true,
+            "neckline_clearly_identifiable": true,
+            "no_major_news_next_48h": false,
+            "preceding_trend_confirmed": false,
+            "rr_above_2_0": false,
+            "valid_pattern_structure": true,
+            "volume_above_1_5x_avg_on_break": false,
+            "volume_declining_on_right_shoulder": true
+          },
+          "lines": [],
+          "markers": [],
+          "multi_tf_boost": 1.0,
+          "neckline": [
+            [
+              "2026-08-12",
+              490.596436
+            ],
+            [
+              "2026-09-02",
+              493.809998
+            ]
+          ],
+          "risk_reward": 0.8163857980045448,
+          "status": "failed",
+          "stop_loss": 522.9578292900001,
+          "structure": [
+            {
+              "label": "LS",
+              "price": 512.764702,
+              "time": "2026-08-10"
+            },
+            {
+              "label": "HD",
+              "price": 517.780029,
+              "time": "2026-08-28"
+            },
+            {
+              "label": "RS",
+              "price": 515.650024,
+              "time": "2026-09-03"
+            }
+          ],
+          "target": 470.2684419333333,
+          "timeframe": "daily",
+          "type": "head_and_shoulders"
+        }
+      ],
+      "majority": false,
+      "patterns": [
+        "head_and_shoulders"
+      ],
+      "veto": true
+    },
+    "raw_total": 16.0,
+    "score": 58.0
+  },
+  "entry_zone": [
+    532.58101176,
+    543.450012
+  ],
+  "invalidation": 348.54,
+  "ohlcv_sha": "d1a82204fb4d7f1effe897be971744495ed350a83c3bfa9dde3d87c03c35de86",
+  "patterns": [
+    {
+      "confidence": 92,
+      "direction": "bearish",
+      "end_idx": 92,
+      "entry": 493.950012,
+      "risk_reward": 0.8163857980045448,
+      "start_idx": null,
+      "status": "failed",
+      "stop_loss": 522.9578292900001,
+      "target": 470.2684419333333,
+      "timeframe": "daily",
+      "type": "head_and_shoulders"
+    }
+  ],
+  "pre_gate_signal": "BUY",
+  "quality_gates": [],
+  "quantamental": {
+    "blended_rating": "Buy",
+    "blended_score": 76.4,
+    "evidence": {
+      "fundamental": [
+        "Strong ROE (22.0%)",
+        "Healthy margins (24.0%)",
+        "Attractive PEG (0.90)",
+        "Reasonable P/E (18.0x)",
+        "Positive analyst consensus (strong_buy)"
+      ],
+      "technical": [
+        "Uptrending market structure",
+        "Price above SMA200",
+        "Price above SMA50",
+        "MACD bullish crossover",
+        "RSI overbought (78)"
+      ]
+    },
+    "fundamental_rating": "Buy",
+    "fundamental_score": 91.5,
+    "market_cap_category": "large",
+    "sentiment_article_count": 0,
+    "sentiment_label": "",
+    "sentiment_score": 0,
+    "source": "Quantamental fusion of technical signal, 22-section fundamental screening, and news sentiment.",
+    "technical_confidence": 78,
+    "technical_score": 58.0,
+    "technical_signal": "BUY",
+    "weight_adjustments": [
+      "Wide Moat +3% fundamental",
+      "Low Risk +3% fundamental",
+      "Strong Buy consensus +3% fundamental"
+    ],
+    "weights": {
+      "fundamental": 0.55,
+      "technical": 0.45
+    }
+  },
+  "signal": "HOLD",
+  "targets": [
+    738.3600240000001,
+    760.5108247200001,
+    790.0452256800002
+  ],
+  "technical_signal": "BUY",
+  "ticker": "MSFT"
+}

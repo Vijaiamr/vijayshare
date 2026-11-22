@@ -1,0 +1,53 @@
+# ═══════════════════════════════════════════════════════════════════════
+#  VijayMaruthi — example crontab
+#
+#  Install:   crontab cron/crontab.example        (from the project root)
+#  View:      crontab -l
+#  Edit:      crontab -e
+#  Remove:    crontab -r
+#
+#  All paths are absolute. The project path contains a SPACE, so every
+#  path is quoted/escaped. All jobs log to the project logs/ folder.
+#
+#  TIMES ARE LOCAL TIME (machine timezone, IST on this Mac).
+#  NSE market hours: 09:15–15:30 IST. Jobs below run after the close.
+# ═══════════════════════════════════════════════════════════════════════
+
+# Cron environment — minimal PATH inside cron, so use absolute binaries
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PYTHON=/Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+# Empty = no mail; check logs/ instead (must be its own line — a trailing
+# comment after MAILTO="" breaks the macOS cron parser)
+MAILTO=""
+
+CRON_DIR=/Users/vijaykumar/projecs\ /opencode/share/vijaymaruthi/cron
+
+# ── 1a. Supabase sync — ONCE DAILY at 3:30 PM IST (market close) ──
+#    Mac cron uses LOCAL time (this Mac is on IST).
+#    (skips the 5-year OHLCV candle backfill which takes ~15 min;
+#     run the full backfill separately, see 1b)
+30 15 * * * $CRON_DIR/run_supabase_sync.sh --skip-ohlcv
+
+# ── 1b. Full OHLCV backfill — weekly, Sunday 21:00 local (~15 min) ──
+# 0 21 * * 0 $CRON_DIR/run_supabase_sync.sh
+
+# ── 2. Daily analysis refresh — 19:30 local (first 100 tickers) ──
+#    (0 = all ~2400, takes 1.5–3 h — use at night / weekend instead)
+30 19 * * 1-5 $CRON_DIR/run_daily_analysis.sh --limit 100
+
+# ── 3. Keep the local dev stack alive — every 5 minutes ──
+#    (only if this Mac stays on; launchd is the better tool — see CRON.md §7)
+# */5 * * * * $CRON_DIR/keep_alive.sh
+
+# ── 4. Ping the Vercel-hosted backend health check (serverless keep-alive) ──
+#    0 */6 * * * curl -s -o /dev/null -w "%{http_code}\n" https://vijaymaruthi-backend.vercel.app/api/v1/health >> /Users/vijaykumar/projecs\ /opencode/share/vijaymaruthi/logs/cron_vercel_health.log 2>&1
+
+# ── 5. AIOps (Auto Pilot learning engine) — OPTIONAL, additive, commented ──
+#    Runs the AIOps morning/evening loop on the Mac. Does NOT touch the
+#    analysis engine above (separate DB: aiops/state/aiops.db, separate CLI).
+#    Requires: aiops init once, and `opencode serve` running for --mode llm.
+#    Morning before open (08:45 IST), evening after close (16:15 IST).
+# AIOPS=/Users/vijaykumar/projecs\ /opencode/share/vijaymaruthi/aiops
+# 45 8 * * 1-5 cd "$AIOPS" && /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 -m aiops.cli.main morning >> "$AIOPS/state/aiops_cron.log" 2>&1
+# 15 16 * * 1-5 cd "$AIOPS" && /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 -m aiops.cli.main evening >> "$AIOPS/state/aiops_cron.log" 2>&1

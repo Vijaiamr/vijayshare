@@ -1,0 +1,5 @@
+Date,UTR,Debit Txn id,Type,Amount,Sender,Recipient,Note
+01-06-2026,123456789012,ABC123,Debit,543.00,Me,Swiggy,Food order
+02-06-2026,123456789013,ABC124,Credit,85000.00,Employer,Me,Salary
+03-06-2026,123456789014,ABC125,Debit,200.00,Me,Zepto,Groceries
+04-06-2026,123456789015,ABC126,Debit,1500.00,Me,Reliance Digital,Electronics

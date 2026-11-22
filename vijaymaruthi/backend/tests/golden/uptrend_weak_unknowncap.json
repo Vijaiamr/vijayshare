@@ -1,0 +1,128 @@
+{
+  "case": "uptrend_weak_unknowncap",
+  "confidence": 44,
+  "conv_fundamental": {
+    "cap_applied": true,
+    "cap_reason": "momentum factor 10/100 < 50",
+    "factors": {
+      "analyst": 50,
+      "dividend": 40,
+      "growth": 25.0,
+      "momentum": 10.0,
+      "profitability": 25.0,
+      "risk": 20.0,
+      "value": 20.0
+    },
+    "score": 25.0
+  },
+  "conv_technical": {
+    "components": {
+      "candlestick": {
+        "last_pattern": "None",
+        "score": 0.0,
+        "weight": 10
+      },
+      "momentum": {
+        "macd_bullish": true,
+        "rsi": 85.30828438770018,
+        "score": 7.0,
+        "weight": 15
+      },
+      "oscillator": {
+        "divergences": 1,
+        "score": -8.0,
+        "weight": 10
+      },
+      "pattern": {
+        "bear_weight": 0.0,
+        "bull_weight": 0.0,
+        "majority": true,
+        "patterns": [],
+        "score": 0.0,
+        "weight": 30
+      },
+      "trend": {
+        "above_200": true,
+        "above_50": true,
+        "score": 15.0,
+        "structure": "Uptrend (HH+HL)",
+        "weight": 15
+      },
+      "volume": {
+        "above_avg": true,
+        "obv_bullish": true,
+        "score": 10.0,
+        "up_down_ratio_10d": 1.4286263471472318,
+        "weight": 15
+      },
+      "wyckoff": {
+        "phase": "Ranging / Unknown",
+        "score": 0.0,
+        "weight": 5
+      }
+    },
+    "pattern_majority": true,
+    "pattern_votes": {
+      "available": true,
+      "bear_weight": 0.0,
+      "bull_weight": 0.0,
+      "geometry": [],
+      "majority": true,
+      "patterns": [],
+      "veto": false
+    },
+    "raw_total": 24.0,
+    "score": 62.0
+  },
+  "entry_zone": [
+    166.86409632379227,
+    170.269486044686
+  ],
+  "invalidation": 136.36,
+  "ohlcv_sha": "6466db147745337c61461d7007ee7e42cd189be6ef3f08440b690f310521b8ea",
+  "patterns": [],
+  "pre_gate_signal": "HOLD",
+  "quality_gates": [
+    "High leverage (D/E 6.0)",
+    "3 risk flags"
+  ],
+  "quantamental": {
+    "blended_rating": "Hold",
+    "blended_score": 43.5,
+    "evidence": {
+      "fundamental": [],
+      "technical": [
+        "Uptrending market structure",
+        "Price above SMA200",
+        "Price above SMA50",
+        "MACD bullish crossover",
+        "RSI overbought (85)"
+      ]
+    },
+    "fundamental_rating": "Sell",
+    "fundamental_score": 25.0,
+    "market_cap_category": "mid",
+    "sentiment_article_count": 0,
+    "sentiment_label": "",
+    "sentiment_score": 0,
+    "source": "Quantamental fusion of technical signal, 22-section fundamental screening, and news sentiment.",
+    "technical_confidence": 78,
+    "technical_score": 62.0,
+    "technical_signal": "BUY",
+    "weight_adjustments": [
+      "Standard market-cap weights"
+    ],
+    "weights": {
+      "fundamental": 0.5,
+      "technical": 0.5
+    }
+  },
+  "signal": "HOLD",
+  "targets": [
+    204.178972089372,
+    210.30434125205315,
+    218.47150013562805
+  ],
+  "technical_signal": "BUY",
+  "ticker": "TEST6.NS"
+}

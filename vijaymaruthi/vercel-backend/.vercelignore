@@ -1,0 +1,6 @@
+**/*.pyc
+**/__pycache__/**
+.vercel/**
+backend/**/__pycache__/**
+logs/
+reports/

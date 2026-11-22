@@ -1,0 +1,5 @@
+# VijayMaruthi platform test dependencies
+# Install: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 -m pip install -r requirements.txt
+pytest>=8.0
+requests>=2.31
+python-dotenv>=1.0

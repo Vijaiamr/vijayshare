@@ -1,0 +1,125 @@
+{
+  "case": "whipsaw_broken_small",
+  "confidence": 34,
+  "conv_fundamental": {
+    "cap_applied": true,
+    "cap_reason": "value factor 10/100 < 50",
+    "factors": {
+      "analyst": 25,
+      "dividend": 10,
+      "growth": 10.0,
+      "momentum": 10.0,
+      "profitability": 10.0,
+      "risk": 20.0,
+      "value": 10.0
+    },
+    "score": 13.0
+  },
+  "conv_technical": {
+    "components": {
+      "candlestick": {
+        "last_pattern": "None",
+        "score": 0.0,
+        "weight": 10
+      },
+      "momentum": {
+        "macd_bullish": false,
+        "rsi": 49.382716049382616,
+        "score": 1.0,
+        "weight": 15
+      },
+      "oscillator": {
+        "divergences": 0,
+        "score": 0.0,
+        "weight": 10
+      },
+      "pattern": {
+        "bear_weight": 0.0,
+        "bull_weight": 0.0,
+        "majority": true,
+        "patterns": [],
+        "score": 0.0,
+        "weight": 30
+      },
+      "trend": {
+        "above_200": false,
+        "above_50": false,
+        "score": -3.0,
+        "structure": "Expanding / Volatile",
+        "weight": 15
+      },
+      "volume": {
+        "above_avg": false,
+        "obv_bullish": true,
+        "score": 5.0,
+        "up_down_ratio_10d": 1.1639948017739818,
+        "weight": 15
+      },
+      "wyckoff": {
+        "phase": "Ranging / Unknown",
+        "score": 0.0,
+        "weight": 5
+      }
+    },
+    "pattern_majority": true,
+    "pattern_votes": {
+      "available": true,
+      "bear_weight": 0.0,
+      "bull_weight": 0.0,
+      "geometry": [],
+      "majority": true,
+      "patterns": [],
+      "veto": false
+    },
+    "raw_total": 3.0,
+    "score": 51.5
+  },
+  "entry_zone": [
+    88.67129479111158,
+    92.29053131319777
+  ],
+  "invalidation": 90.18,
+  "ohlcv_sha": "de0865af5cfc961d6cd7ea2d5dd870e8c723d31fd48460dddcb54ee51a5e5368",
+  "patterns": [],
+  "pre_gate_signal": "AVOID",
+  "quality_gates": [
+    "Micro-cap (\u20b9400 Cr) \u2014 severe liquidity risk",
+    "Extreme leverage (D/E 12.0)",
+    "Loss-making with declining revenue",
+    "3 risk flags",
+    "Extreme valuation (PE 150)"
+  ],
+  "quantamental": {
+    "blended_rating": "Sell",
+    "blended_score": 34.2,
+    "evidence": {
+      "fundamental": [],
+      "technical": [
+        "MACD bearish crossover"
+      ]
+    },
+    "fundamental_rating": "Strong Sell",
+    "fundamental_score": 13.0,
+    "market_cap_category": "small",
+    "sentiment_article_count": 0,
+    "sentiment_label": "",
+    "sentiment_score": 0,
+    "source": "Quantamental fusion of technical signal, 22-section fundamental screening, and news sentiment.",
+    "technical_confidence": 60,
+    "technical_score": 51.5,
+    "technical_signal": "HOLD",
+    "weight_adjustments": [
+      "Standard market-cap weights"
+    ],
+    "weights": {
+      "fundamental": 0.45,
+      "technical": 0.55
+    }
+  },
+  "signal": "AVOID",
+  "targets": [
+    98.15
+  ],
+  "technical_signal": "HOLD",
+  "ticker": "TEST5.NS"
+}

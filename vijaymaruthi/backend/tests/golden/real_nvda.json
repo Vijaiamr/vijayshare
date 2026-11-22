@@ -1,0 +1,227 @@
+{
+  "case": "real_nvda",
+  "confidence": 77,
+  "conv_fundamental": {
+    "cap_applied": false,
+    "cap_reason": null,
+    "factors": {
+      "analyst": 100,
+      "dividend": 70,
+      "growth": 100.0,
+      "momentum": 70.0,
+      "profitability": 100.0,
+      "risk": 100.0,
+      "value": 80.0
+    },
+    "score": 91.5
+  },
+  "conv_technical": {
+    "components": {
+      "candlestick": {
+        "last_pattern": "None",
+        "score": 0.0,
+        "weight": 10
+      },
+      "momentum": {
+        "macd_bullish": false,
+        "rsi": 54.42518503172259,
+        "score": -1.0,
+        "weight": 15
+      },
+      "oscillator": {
+        "divergences": 1,
+        "score": -5.0,
+        "weight": 10
+      },
+      "pattern": {
+        "bear_weight": 0.0,
+        "bull_weight": 4.0,
+        "majority": true,
+        "patterns": [
+          "triple_bottom"
+        ],
+        "score": 4.0,
+        "weight": 30
+      },
+      "trend": {
+        "above_200": true,
+        "above_50": true,
+        "score": 15.0,
+        "structure": "Uptrend (HH+HL)",
+        "weight": 15
+      },
+      "volume": {
+        "above_avg": false,
+        "obv_bullish": true,
+        "score": 7.0,
+        "up_down_ratio_10d": 1.8763120096164845,
+        "weight": 15
+      },
+      "wyckoff": {
+        "phase": "Markup (vol drying)",
+        "score": 0.0,
+        "weight": 5
+      }
+    },
+    "pattern_majority": true,
+    "pattern_votes": {
+      "available": true,
+      "bear_weight": 0.0,
+      "bull_weight": 4.0,
+      "geometry": [
+        {
+          "confidence": 89,
+          "confirmations": [
+            "Volume higher on 3rd bottom (accumulation)",
+            "Breakout confirmed",
+            "Pattern spans 15+ bars",
+            "Intervening peaks at similar level"
+          ],
+          "direction": "bullish",
+          "end_idx": 90,
+          "entry": 230.860001,
+          "entry_checklist": {
+            "adx_above_25": false,
+            "higher_timeframe_aligns": false,
+            "neckline_break_on_closing_basis": true,
+            "neckline_clearly_identifiable": true,
+            "no_major_news_next_48h": false,
+            "preceding_trend_confirmed": false,
+            "rr_above_2_0": false,
+            "valid_pattern_structure": true,
+            "volume_above_1_5x_avg_on_break": false,
+            "volume_declining_on_right_shoulder": false
+          },
+          "lines": [
+            {
+              "points": [
+                [
+                  "2026-08-11",
+                  212.61210000000003
+                ],
+                [
+                  "2026-10-13",
+                  212.61210000000003
+                ]
+              ],
+              "style": "dashed"
+            }
+          ],
+          "markers": [
+            {
+              "label": "T1",
+              "price": 215.958347,
+              "time": "2026-08-11"
+            },
+            {
+              "label": "T2",
+              "price": 207.018358,
+              "time": "2026-08-24"
+            },
+            {
+              "label": "T3",
+              "price": 214.859595,
+              "time": "2026-09-01"
+            },
+            {
+              "label": "P1",
+              "price": 227.66525,
+              "time": "2026-08-17"
+            },
+            {
+              "label": "P2",
+              "price": 230.212396,
+              "time": "2026-08-27"
+            }
+          ],
+          "multi_tf_boost": 1.0,
+          "neckline": [],
+          "risk_reward": 0.8320738536554044,
+          "status": "failed",
+          "stop_loss": 210.48597900000001,
+          "structure": [],
+          "target": 247.812692,
+          "timeframe": "daily",
+          "type": "triple_bottom"
+        }
+      ],
+      "majority": true,
+      "patterns": [
+        "triple_bottom"
+      ],
+      "veto": false
+    },
+    "raw_total": 20.0,
+    "score": 60.0
+  },
+  "entry_zone": [
+    223.94960392,
+    228.520004
+  ],
+  "invalidation": 189.69,
+  "ohlcv_sha": "f9fc93187c493451716f2428bd7697dc356318ea1c91a684b12e7933fc4ebe7a",
+  "patterns": [
+    {
+      "confidence": 89,
+      "direction": "bullish",
+      "end_idx": 90,
+      "entry": 230.860001,
+      "risk_reward": 0.8320738536554044,
+      "start_idx": null,
+      "status": "failed",
+      "stop_loss": 210.48597900000001,
+      "target": 247.812692,
+      "timeframe": "daily",
+      "type": "triple_bottom"
+    }
+  ],
+  "pre_gate_signal": "BUY",
+  "quality_gates": [],
+  "quantamental": {
+    "blended_rating": "Buy",
+    "blended_score": 77.3,
+    "evidence": {
+      "fundamental": [
+        "Strong ROE (22.0%)",
+        "Healthy margins (24.0%)",
+        "Attractive PEG (0.90)",
+        "Reasonable P/E (18.0x)",
+        "Positive analyst consensus (strong_buy)"
+      ],
+      "technical": [
+        "Uptrending market structure",
+        "Price above SMA200",
+        "Price above SMA50",
+        "MACD bearish crossover",
+        "Strong trend (ADX 28)"
+      ]
+    },
+    "fundamental_rating": "Buy",
+    "fundamental_score": 91.5,
+    "market_cap_category": "large",
+    "sentiment_article_count": 0,
+    "sentiment_label": "",
+    "sentiment_score": 0,
+    "source": "Quantamental fusion of technical signal, 22-section fundamental screening, and news sentiment.",
+    "technical_confidence": 71,
+    "technical_score": 60.0,
+    "technical_signal": "BUY",
+    "weight_adjustments": [
+      "Wide Moat +3% fundamental",
+      "Low Risk +3% fundamental",
+      "Strong Buy consensus +3% fundamental"
+    ],
+    "weights": {
+      "fundamental": 0.55,
+      "technical": 0.45
+    }
+  },
+  "signal": "BUY",
+  "targets": [
+    267.350008,
+    275.37050824,
+    286.06450856000004
+  ],
+  "technical_signal": "BUY",
+  "ticker": "NVDA"
+}
